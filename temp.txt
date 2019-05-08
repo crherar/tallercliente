@@ -1,0 +1,3 @@
+Test C:\users\cris\documents\pruebas\malicioso.exe
+Test C:\users\cris\documents\ransomware.exe
+Test C:\users\cris\documents\taller\archivomalicioso.exe

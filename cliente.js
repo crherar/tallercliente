@@ -2,19 +2,27 @@
 const socket = require('socket.io-client')('http://192.168.100.2:3000/');
 var cmd = require('node-cmd');
 var { exec } = require('child_process');
+const { spawn } = require('child_process');
+const fs = require('fs');  
+const Path = require('path'); 
+const Axios = require('axios');
+
+var moment = require('moment');
+
+var fecha = moment().format('DD MMMM YYYY, h:mm:ss a'); // May 1st 2019, 10:59:20 pm
+
+//console.log(fecha);
 
 const someDelay = 10;
 
 'use strict'
 
-const Fs = require('fs')  
-const Path = require('path')  
-const Axios = require('axios')
+/******************** Obtener regla ********************/
 
 async function obtenerRegla (archivoregla) {  
   const url = "http://192.168.100.2:3000/reglas/" + archivoregla;
   const path = Path.resolve(__dirname, 'reglas', archivoregla);
-  const writer = Fs.createWriteStream(path)
+  const writer = fs.createWriteStream(path)
 
   const response = await Axios({
     url,
@@ -30,6 +38,7 @@ async function obtenerRegla (archivoregla) {
   });
 }
 
+/******************** On connect ********************/
 
 socket.on('connect', function () {
     console.log("\nSocket conectado...");
@@ -57,8 +66,8 @@ socket.on('connect', function () {
   });
 });
 
-const { spawn } = require('child_process');
 
+/******************** Ejecutar regla ********************/
 
 socket.on('ejecutar-regla', function(datos){
   
@@ -74,9 +83,19 @@ socket.on('ejecutar-regla', function(datos){
     obtenerRegla(datos.regla);
 
     var child = spawn('cmd' , ['/c', 'yara64.exe -r ' + 'reglas\\' + datos.regla + ' ' + datos.ruta]);
+
+
 	child.stdout.on('data',
 		function (data) {
 		    console.log('\nArchivos infectados:\n' + data);
+			fs.writeFile("temp.txt", data, (err) => {
+			if (err) console.log(err);
+			console.log("Información almacenada en temp.txt.");
+			});
+/*			fs.on('close', function(code) {
+			  fs.closeSync();
+				console.log('Archivo cerrado.');
+			});*/
 	});
     child.stderr.on('data', function (data) {
         //throw errors
@@ -84,10 +103,10 @@ socket.on('ejecutar-regla', function(datos){
     });
 
     child.on('close', function (code) {
-        console.log('Proceso hijo terminado con codigo: ' + code);
+        console.log('Proceso terminado con código: ' + code);
     });
 
-/****************   con Exec *******************/
+/**************** con Exec *******************/
 /*   var comando = 'yara64.exe -r ' + 'reglas\\' + datos.regla + ' ' + datos.ruta;
     exec(comando, (error, stdout, stderr) => {
       if (error) {
@@ -101,31 +120,37 @@ socket.on('ejecutar-regla', function(datos){
 });
 
 
-socket.on('obtener-resultados', function(datos){
+/******************** Obtener resultados ********************/
+
+socket.on('obtener-resultados', function (name, word, fn) {
+    
+ 
+
+  console.log("Evento 'obtener-resultados' activado satisfactoriamente...");
+  console.log("Leyendo archivo temp.txt...");
   
-  console.log("Evento 'ejecutar-regla' activado satisfactoriamente...");
-  console.log("Ejecutando regla: " + datos.regla);
-  console.log("Escaneando en ruta: " + datos.ruta); 
-  
-  var datos = {
-      regla: datos.regla,
-      ruta: datos.ruta
-    }
+	var content = '';
+	// First I want to read the file
+	fs.readFile('temp.txt', 'utf-8', function read(err, data) {
+	    if (err) {
+	        throw err;
+	    }
+	    //console.log('type of data = ' + typeof(data));
+	    content = data;
 
-    obtenerRegla(datos.regla);
+	    // Invoke the next step here however you like
+	    //console.log('content = ' + content);   // Put all of the code here (not the best solution)
+	    //processFile();          // Or put the next step in a function and invoke it
+		fn(content);
+	});
+	console.log(content);
 
-	const child = spawn('yara64.exe -r ' + 'reglas\\' + datos.regla + ' ' + datos.ruta);
-    var comando = 'yara64.exe -r ' + 'reglas\\' + datos.regla + ' ' + datos.ruta;
-    exec(comando, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`exec error: ${error}`);
-        return;
-      }
-      console.log(`\nArchivos infectados:\n${stdout}` + '\n');
-      console.log(`Error log:\n${stderr}`);
-
-    });
-});
+	
+/*	function processFile() {
+	    console.log(content);
+	}*/
+/*});*/
+ });
 
 });
 
