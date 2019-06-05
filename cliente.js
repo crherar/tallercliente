@@ -1,5 +1,10 @@
 #!/usr/bin/env node
-const socket = require('socket.io-client')('http://192.168.100.2:3000/');
+
+console.log('Especificado= ' + 'http://' + process.argv[2] + ':' + process.argv[3]);
+
+var ip_puerto = 'http://' + process.argv[2] + ':' + process.argv[3]
+
+const socket = require('socket.io-client')(ip_puerto);
 var cmd = require('node-cmd');
 var { exec } = require('child_process');
 const { spawn } = require('child_process');
@@ -20,8 +25,10 @@ const someDelay = 10;
 /******************** Obtener regla ********************/
 
 async function obtenerRegla (archivoregla) {  
-  const url = "http://192.168.100.2:3000/reglas/" + archivoregla;
+  const url = ip_puerto + "/reglas/" + archivoregla;
+  //console.log(url);
   const path = Path.resolve(__dirname, 'reglas', archivoregla);
+  //console.log(path);
   const writer = fs.createWriteStream(path)
 
   const response = await Axios({
@@ -55,10 +62,10 @@ socket.on('connect', function () {
       // this single interface has multiple ipv4 addresses
       console.log(ifname + ':' + alias, iface.address);
     } else {
-    	//this interface has only one ipv4 adress
-    	//console.log(ifname, iface.address);
-    	console.log("Enviando IP=" + iface.address + " al servidor central...");
-    	console.log("Esperando instrucciones...\n");
+      //this interface has only one ipv4 adress
+      //console.log(ifname, iface.address);
+      console.log("Enviando IP=" + iface.address + " al servidor central...");
+      console.log("Esperando instrucciones...\n");
     }
     ++alias;
 
@@ -82,75 +89,153 @@ socket.on('ejecutar-regla', function(datos){
 
     obtenerRegla(datos.regla);
 
-    var child = spawn('cmd' , ['/c', 'yara64.exe -r ' + 'reglas\\' + datos.regla + ' ' + datos.ruta]);
+    var child = spawn('cmd' , ['/c', 'c:\\cliente\\yara64.exe -r ' + 'c:\\cliente\\reglas\\' + datos.regla + ' ' + datos.ruta]);
+    //var child = spawn('yara64.exe' , ['-r ' + 'reglas\\' + datos.regla + ' ' + datos.ruta]);
 
-
-	child.stdout.on('data',
-		function (data) {
-		    console.log('\nArchivos infectados:\n' + data);
-			fs.writeFile("temp.txt", data, (err) => {
-			if (err) console.log(err);
-			console.log("Información almacenada en temp.txt.");
-			});
-/*			fs.on('close', function(code) {
-			  fs.closeSync();
-				console.log('Archivo cerrado.');
-			});*/
-	});
-    child.stderr.on('data', function (data) {
-        //throw errors
-        console.log('Error log: ' + data);
-    });
+  child.stdout.on('data',
+    function (data) {
+        console.log('\nArchivos maliciosos:\n' + data);
+      fs.appendFileSync("c:\\cliente\\temp.txt", data, (err) => {
+     	 if (err) console.log(err);
+     	 console.log("Información almacenada en temp.txt.");
+      });
+  });
+   
+   child.stderr.on('data', function (data) {
+         fs.appendFileSync("c:\\cliente\\errorlog.txt", data, (err) => {
+     	/* if (err) console.log(err);
+     	console.log(data);*/
+     	 
+      });
+        //console.log("Información almacenada en errorlog.txt.");
+   });
 
     child.on('close', function (code) {
         console.log('Proceso terminado con código: ' + code);
     });
 
+/*var allLines = fs.readFileSync('temp.txt').toString().split('\n');
+fs.writeFileSync('temp2.txt', '', function(){console.log('file is empty')})
+allLines.forEach(function (line) { 
+    var newLine = line + "candy";
+    console.log(newLine);
+    fs.appendFileSync("temp2.txt", newLine.toString() + "\n");
+});
+*/
+
 /**************** con Exec *******************/
-/*   var comando = 'yara64.exe -r ' + 'reglas\\' + datos.regla + ' ' + datos.ruta;
+/*  var comando = 'c:\\cliente\\yara64.exe -r ' + 'c:\\cliente\\reglas\\' + datos.regla + ' ' + datos.ruta
     exec(comando, (error, stdout, stderr) => {
       if (error) {
         console.error(`exec error: ${error}`);
         return;
       }
       console.log(`\nArchivos infectados:\n${stdout}` + '\n');
-      console.log(`Error log:\n${stderr}`);
-
+      //fs.writeFile()...
+      fs.appendFileSync("c:\\cliente\\temp.txt", stdout, (err) => {
+     	 if (err) console.log(err);
+     	 console.log("Información almacenada en temp.txt.");
+      });
+      //console.log(`Error log:\n${stderr}`);
+	/*	 fs.writeFile("c:\\cliente\\errorlog.txt", stderr, (err) => {
+		     if (err) console.log(err);
+		     console.log("Información almacenada en errorlog.txt.");
+		  });
+		 console.log('Proceso terminado con código: 0');
     });*/
+    //console.log('Proceso terminado con código: 0');
 });
 
 
 /******************** Obtener resultados ********************/
 
-socket.on('obtener-resultados', function (name, word, fn) {
+socket.on('obtener-resultados', function (fn) {
     
  
 
   console.log("Evento 'obtener-resultados' activado satisfactoriamente...");
   console.log("Leyendo archivo temp.txt...");
   
-	var content = '';
-	// First I want to read the file
-	fs.readFile('temp.txt', 'utf-8', function read(err, data) {
-	    if (err) {
-	        throw err;
-	    }
-	    //console.log('type of data = ' + typeof(data));
-	    content = data;
+  var content = '';
+  // First I want to read the file
+  //fs.readFile('temp.txt', 'utf-8', function read(err, data) {
+  fs.readFile('c:\\cliente\\temp.txt', 'utf-8', function read(err, data) {
+      if (err) {
+          throw err;
+      }
+      //console.log('type of data = ' + typeof(data));
+      content = data;
+      console.log(content);
 
-	    // Invoke the next step here however you like
-	    //console.log('content = ' + content);   // Put all of the code here (not the best solution)
-	    //processFile();          // Or put the next step in a function and invoke it
-		fn(content);
-	});
-	console.log(content);
+      // Invoke the next step here however you like
+      //console.log('content = ' + content);   // Put all of the code here (not the best solution)
+      //processFile();          // Or put the next step in a function and invoke it
+    fn(content);
+  });
+  console.log(content);
 
-	
-/*	function processFile() {
-	    console.log(content);
-	}*/
+
+  
+/*  function processFile() {
+      console.log(content);
+  }*/
 /*});*/
  });
 
+
+/******************** Eliminar archivos ********************/
+
+socket.on('eliminar-archivos', function (datos, fn) {
+    
+ 
+  console.log("Evento 'eliminar-archivos' activado satisfactoriamente...");
+  console.log("Eliminando archivos: \n");
+
+  var datos = {
+      rutas: datos.rutas
+  }
+
+  var eliminadosExito = [];
+  var eliminadosError = [];
+ 
+// podria ser: 
+// guardar el archivo en un archivo de texto una vez ha sido eliminado
+
+
+  for (var i=0; i<datos.rutas.length; i++){
+
+  console.log('datos.rutas[' + i + ']=' + datos.rutas[i]);
+
+  var child = spawn('cmd' , ['/c', 'del' + ' ' + datos.rutas[i]);
+
+  child.stdout.on('data',
+    function (data){
+    	console.log(typeof(data));
+        console.log('\nArchivos eliminados:\n' + data);
+        if (data){
+        	console.log('proceso exitoso');
+        }
+        eliminadosExito.push(datos.rutas[i]);
+  });
+   
+   child.stderr.on('data', function (data, err) {
+     	if (err) console.log(err);
+     	console.log(data.toString());
+     });
+        //console.log("Información almacenada en errorlog.txt.");
+
+    child.on('close', function (code) {
+    	if (code == 0) {
+    	}
+        console.log('Proceso terminado con código: ' + code);
+    });
+
+   }
+   console.log(eliminadosExito);
+   console.log(eliminadosError);
+
+   fn({eliminadosExito, eliminadosError});
+
 });
 
+});

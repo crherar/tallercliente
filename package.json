@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@rauschma/stringio": "^1.4.0",
     "axios": "^0.18.0",
     "balanced-match": "^1.0.0",
     "bootstrap": "^4.3.1",
@@ -16,6 +17,7 @@
     "child_process": "^1.0.2",
     "moment": "^2.24.0",
     "node-cmd": "^3.0.0",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.2.0",
+    "stream-splitter": "^0.3.2"
   }
 }

@@ -1,0 +1,194 @@
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\Explorer\thumbcache_1024.db: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\Explorer\thumbcache_256.db: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\Explorer\thumbcache_32.db: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\Explorer\thumbcache_96.db: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\Explorer\thumbcache_idx.db: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\Explorer\thumbcache_sr.db: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\History\History.IE5\index.dat: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\History\History.IE5\MSHist012019052620190527\index.dat: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.IE5\index.dat: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\UsrClass.dat: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\UsrClass.dat.LOG1: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\UsrClass.dat.LOG2: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\UsrClass.dat{5aaa6ee3-6670-11e9-a581-080027c89beb}.TM.blf: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\UsrClass.dat{5aaa6ee3-6670-11e9-a581-080027c89beb}.TMContainer00000000000000000001.regtrans-ms: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\UsrClass.dat{5aaa6ee3-6670-11e9-a581-080027c89beb}.TMContainer00000000000000000002.regtrans-ms: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Microsoft\Windows\WindowsUpdate.log: could not open file
+error scanning c:\users\cris.taller\AppData\Local\Temp\FXSAPIDebugLogFile.txt: could not open file
+error scanning c:\users\cris.taller\AppData\Roaming\Microsoft\Windows\Cookies\index.dat: could not open file
+error scanning c:\users\cris.taller\NTUSER.DAT: could not open file
+error scanning c:\users\cris.taller\ntuser.dat.LOG1: could not open file
+error scanning c:\users\cris.taller\ntuser.dat.LOG2: could not open file
+error scanning c:\users\cris.taller\NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf: could not open file
+error scanning c:\users\cris.taller\NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms: could not open file
+error scanning c:\users\cris.taller\NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\Keys\a1670ded73904d285206cec4de9797cc_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\15e3b1c92d950f4704f1cff8dc71ca21_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\17e481b346c32b94d9cfa56c089f6932_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\1b1a0c974374567299d48ed470fe7461_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\21915117f38e4def5cf3050f444bf1c2_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\219ab1f2a76e73de792cb49a4ea7668b_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\27fad99d6b21fc27df2df971d2b07db3_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\2aec4521483320ce6ed27da12d7985fd_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\2d066eac485017af9a975446236b6f3a_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\36d262111a8cdb6a6f191107205cc4db_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\3fbf1f54f8a097f5813759f7023dcf29_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\6209339a48e950fb962bb26ef055eea9_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\6a8ac22d1a4dd8bd92fad744cca15e22_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\775b748530aad793e70a29c4b37381ee_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\8c100b93f63fd1a9f1570b929f44d5bd_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\a11808ad7f98c473d37837422524fc99_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\a8639ac7b6d6e0c10c7512e0fce71661_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\aa723836c6854cee202d11e9cdbc6099_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\aea4f350a8e8f671acce2f4d482c78b7_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\af46f97b70e3b7925ed8d0cd7492a991_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\bc2809b09cd0358bbfa80500012e653e_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\c37225e4f44e8c9f41d9e0df7a7916d1_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\c377039e9aa04d34dc5101d4d83d0500_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\ccaf29e592b6f7fe7b93d311c98685a2_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\cdf4369a75569c1f99632a12a7c50eee_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\d621612f204525a2ba13844aa4dacbf2_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\ed6fac054200c634f15e6f5ebe1390fd_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\f7884f1f3443c27ac0ead412baee5072_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\f9b5d2394a74c97fad5e23a93a1f9784_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\User Account Pictures\cris.dat: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\Keys\a1670ded73904d285206cec4de9797cc_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\15e3b1c92d950f4704f1cff8dc71ca21_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\17e481b346c32b94d9cfa56c089f6932_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\1b1a0c974374567299d48ed470fe7461_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\21915117f38e4def5cf3050f444bf1c2_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\219ab1f2a76e73de792cb49a4ea7668b_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\27fad99d6b21fc27df2df971d2b07db3_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\2aec4521483320ce6ed27da12d7985fd_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\2d066eac485017af9a975446236b6f3a_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\36d262111a8cdb6a6f191107205cc4db_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\3fbf1f54f8a097f5813759f7023dcf29_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\6209339a48e950fb962bb26ef055eea9_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\6a8ac22d1a4dd8bd92fad744cca15e22_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\775b748530aad793e70a29c4b37381ee_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\8c100b93f63fd1a9f1570b929f44d5bd_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\a11808ad7f98c473d37837422524fc99_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\a8639ac7b6d6e0c10c7512e0fce71661_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\aa723836c6854cee202d11e9cdbc6099_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\aea4f350a8e8f671acce2f4d482c78b7_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\af46f97b70e3b7925ed8d0cd7492a991_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\bc2809b09cd0358bbfa80500012e653e_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\c37225e4f44e8c9f41d9e0df7a7916d1_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\c377039e9aa04d34dc5101d4d83d0500_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\ccaf29e592b6f7fe7b93d311c98685a2_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\cdf4369a75569c1f99632a12a7c50eee_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\d621612f204525a2ba13844aa4dacbf2_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\ed6fac054200c634f15e6f5ebe1390fd_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\f7884f1f3443c27ac0ead412baee5072_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\f9b5d2394a74c97fad5e23a93a1f9784_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\User Account Pictures\cris.dat: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Explorer\thumbcache_1024.db: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Explorer\thumbcache_256.db: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Explorer\thumbcache_32.db: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Explorer\thumbcache_96.db: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Explorer\thumbcache_idx.db: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Explorer\thumbcache_sr.db: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\History\History.IE5\index.dat: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\History\History.IE5\MSHist012019052620190527\index.dat: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\UsrClass.dat: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\UsrClass.dat.LOG1: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\UsrClass.dat.LOG2: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\UsrClass.dat{5aaa6ee3-6670-11e9-a581-080027c89beb}.TM.blf: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\UsrClass.dat{5aaa6ee3-6670-11e9-a581-080027c89beb}.TMContainer00000000000000000001.regtrans-ms: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\UsrClass.dat{5aaa6ee3-6670-11e9-a581-080027c89beb}.TMContainer00000000000000000002.regtrans-ms: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.IE5\index.dat: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\WindowsUpdate.log: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Temp\FXSAPIDebugLogFile.txt: could not open file
+error scanning c:\users\cris.TALLER\AppData\Roaming\Microsoft\Windows\Cookies\index.dat: could not open file
+error scanning c:\users\cris.TALLER\NTUSER.DAT: could not open file
+error scanning c:\users\cris.TALLER\ntuser.dat.LOG1: could not open file
+error scanning c:\users\cris.TALLER\ntuser.dat.LOG2: could not open file
+error scanning c:\users\cris.TALLER\NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf: could not open file
+error scanning c:\users\cris.TALLER\NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms: could not open file
+error scanning c:\users\cris.TALLER\NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms: could not open file
+error scanning c:\users\Public\Documents\Acunetix WVS 10\SchedulerLogs\scheduler_log_2019051922494300.csv: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\Keys\a1670ded73904d285206cec4de9797cc_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\15e3b1c92d950f4704f1cff8dc71ca21_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\17e481b346c32b94d9cfa56c089f6932_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\1b1a0c974374567299d48ed470fe7461_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\21915117f38e4def5cf3050f444bf1c2_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\219ab1f2a76e73de792cb49a4ea7668b_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\27fad99d6b21fc27df2df971d2b07db3_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\2aec4521483320ce6ed27da12d7985fd_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\2d066eac485017af9a975446236b6f3a_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\36d262111a8cdb6a6f191107205cc4db_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\3fbf1f54f8a097f5813759f7023dcf29_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\6209339a48e950fb962bb26ef055eea9_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\6a8ac22d1a4dd8bd92fad744cca15e22_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\775b748530aad793e70a29c4b37381ee_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\8c100b93f63fd1a9f1570b929f44d5bd_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\a11808ad7f98c473d37837422524fc99_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\a8639ac7b6d6e0c10c7512e0fce71661_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\aa723836c6854cee202d11e9cdbc6099_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\aea4f350a8e8f671acce2f4d482c78b7_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\af46f97b70e3b7925ed8d0cd7492a991_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\bc2809b09cd0358bbfa80500012e653e_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\c37225e4f44e8c9f41d9e0df7a7916d1_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\c377039e9aa04d34dc5101d4d83d0500_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\ccaf29e592b6f7fe7b93d311c98685a2_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\cdf4369a75569c1f99632a12a7c50eee_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\d621612f204525a2ba13844aa4dacbf2_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\ed6fac054200c634f15e6f5ebe1390fd_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\f7884f1f3443c27ac0ead412baee5072_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\f9b5d2394a74c97fad5e23a93a1f9784_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\User Account Pictures\cris.dat: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\Keys\a1670ded73904d285206cec4de9797cc_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\15e3b1c92d950f4704f1cff8dc71ca21_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\17e481b346c32b94d9cfa56c089f6932_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\1b1a0c974374567299d48ed470fe7461_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\21915117f38e4def5cf3050f444bf1c2_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\219ab1f2a76e73de792cb49a4ea7668b_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\27fad99d6b21fc27df2df971d2b07db3_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\2aec4521483320ce6ed27da12d7985fd_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\2d066eac485017af9a975446236b6f3a_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\36d262111a8cdb6a6f191107205cc4db_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\3fbf1f54f8a097f5813759f7023dcf29_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\6209339a48e950fb962bb26ef055eea9_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\6a8ac22d1a4dd8bd92fad744cca15e22_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\775b748530aad793e70a29c4b37381ee_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\8c100b93f63fd1a9f1570b929f44d5bd_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\a11808ad7f98c473d37837422524fc99_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\a8639ac7b6d6e0c10c7512e0fce71661_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\aa723836c6854cee202d11e9cdbc6099_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\aea4f350a8e8f671acce2f4d482c78b7_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\af46f97b70e3b7925ed8d0cd7492a991_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\bc2809b09cd0358bbfa80500012e653e_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\c37225e4f44e8c9f41d9e0df7a7916d1_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\c377039e9aa04d34dc5101d4d83d0500_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\ccaf29e592b6f7fe7b93d311c98685a2_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\cdf4369a75569c1f99632a12a7c50eee_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\d621612f204525a2ba13844aa4dacbf2_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\ed6fac054200c634f15e6f5ebe1390fd_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\f7884f1f3443c27ac0ead412baee5072_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\Crypto\RSA\MachineKeys\f9b5d2394a74c97fad5e23a93a1f9784_eb707e4d-a6f6-42d8-aa6d-ba20987d094d: could not open file
+error scanning c:\users\All Users\Microsoft\User Account Pictures\cris.dat: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Explorer\thumbcache_1024.db: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Explorer\thumbcache_256.db: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Explorer\thumbcache_32.db: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Explorer\thumbcache_96.db: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Explorer\thumbcache_idx.db: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Explorer\thumbcache_sr.db: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\History\History.IE5\index.dat: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\History\History.IE5\MSHist012019052620190527\index.dat: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.IE5\index.dat: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\UsrClass.dat: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\UsrClass.dat.LOG1: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\UsrClass.dat.LOG2: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\UsrClass.dat{5aaa6ee3-6670-11e9-a581-080027c89beb}.TM.blf: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\UsrClass.dat{5aaa6ee3-6670-11e9-a581-080027c89beb}.TMContainer00000000000000000001.regtrans-ms: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\UsrClass.dat{5aaa6ee3-6670-11e9-a581-080027c89beb}.TMContainer00000000000000000002.regtrans-ms: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Microsoft\Windows\WindowsUpdate.log: could not open file
+error scanning c:\users\cris.TALLER\AppData\Local\Temp\FXSAPIDebugLogFile.txt: could not open file
+error scanning c:\users\cris.TALLER\AppData\Roaming\Microsoft\Windows\Cookies\index.dat: could not open file
+error scanning c:\users\cris.TALLER\NTUSER.DAT: could not open file
+error scanning c:\users\cris.TALLER\ntuser.dat.LOG1: could not open file
+error scanning c:\users\cris.TALLER\ntuser.dat.LOG2: could not open file
+error scanning c:\users\cris.TALLER\NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf: could not open file
+error scanning c:\users\cris.TALLER\NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms: could not open file
+error scanning c:\users\cris.TALLER\NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms: could not open file
+error scanning c:\users\Public\Documents\Acunetix WVS 10\SchedulerLogs\scheduler_log_2019051922494300.csv: could not open file
