@@ -11,7 +11,7 @@ const { spawn } = require('child_process');
 const fs = require('fs');  
 const Path = require('path'); 
 const Axios = require('axios');
-
+var async = require('async');
 var moment = require('moment');
 
 var fecha = moment().format('DD MMMM YYYY, h:mm:ss a'); // May 1st 2019, 10:59:20 pm
@@ -175,21 +175,14 @@ socket.on('obtener-resultados', function (fn) {
   console.log(content);
 
 
-  
-/*  function processFile() {
-      console.log(content);
-  }*/
-/*});*/
- });
+}); 
 
 
 /******************** Eliminar archivos ********************/
 
 socket.on('eliminar-archivos', function (datos, fn) {
-    
  
   console.log("Evento 'eliminar-archivos' activado satisfactoriamente...");
-  console.log("Eliminando archivos: \n");
 
   var datos = {
       rutas: datos.rutas
@@ -197,45 +190,38 @@ socket.on('eliminar-archivos', function (datos, fn) {
 
   var eliminadosExito = [];
   var eliminadosError = [];
- 
-// podria ser: 
-// guardar el archivo en un archivo de texto una vez ha sido eliminado
 
 
-  for (var i=0; i<datos.rutas.length; i++){
+	for (var i=0; i<((datos.rutas).length); i++){
 
-  console.log('datos.rutas[' + i + ']=' + datos.rutas[i]);
+	    var comando = 'del ' + datos.rutas[i];
 
-  var child = spawn('cmd' , ['/c', 'del' + ' ' + datos.rutas[i]);
+	   exec(comando, (error, stdout, stderr) => {
+	      if (error) {
+	        console.error(`exec error: ${error}`);
+	        return;
+	      }
+	      if (stdout == '') {
+	      	console.log('archivo eliminado');
+	      }
+	     console.log(`\nstdout: ${stdout}` + '\n');
+	     console.log(`\nstderr: ${stderr}` + '\n');
+	     eliminadosError.push([stdout, stderr]);
 
-  child.stdout.on('data',
-    function (data){
-    	console.log(typeof(data));
-        console.log('\nArchivos eliminados:\n' + data);
-        if (data){
-        	console.log('proceso exitoso');
-        }
-        eliminadosExito.push(datos.rutas[i]);
-  });
-   
-   child.stderr.on('data', function (data, err) {
-     	if (err) console.log(err);
-     	console.log(data.toString());
-     });
-        //console.log("Información almacenada en errorlog.txt.");
+	    fs.appendFileSync("c:\\cliente\\errorArchivos.txt", stdout, (err) => {
+	     	if (err) console.log(err);
+	     	console.log(stdout); 
+	     });
 
-    child.on('close', function (code) {
-    	if (code == 0) {
-    	}
-        console.log('Proceso terminado con código: ' + code);
-    });
+      	
+ 		});
+	}
 
-   }
-   console.log(eliminadosExito);
-   console.log(eliminadosError);
-
-   fn({eliminadosExito, eliminadosError});
-
+	var arrayFinal = setTimeout(function() {
+		fn(eliminadosError);
+	    //console.log('arreglo final=' + eliminadosError);
+	  }, 5000);
+	
 });
 
 });
