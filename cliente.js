@@ -206,10 +206,12 @@ socket.on('eliminar-archivos', function (datos, fn) {
 	      } else { // caso en que el archivo no se elimino por algun motivo
 	      	console.log(`\nstdout: ${stdout}` + '\n');
 	      	console.log(`\nstderr: ${stderr}` + '\n');
-/*	      	if (stderr.includes('Could Not Find')){
-	      		console.log('incluye uno que no existe');
-	      		stdout = stderr.split('Could Not Find')
-	      	}*/
+	      	if (stderr.includes('Could Not Find')){
+	      		var rutaArchivo = stderr.substr(15);
+	      		console.log('RUTA ARCHIVO= ' + rutaArchivo);
+	      		stdout = rutaArchivo;
+
+	      	}
 	      	eliminadosError.push([stdout, stderr]);
 	      	eliminadosErrorAux.push(stdout);
 	      }	   
