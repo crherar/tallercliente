@@ -13,6 +13,8 @@ const Path = require('path');
 const Axios = require('axios');
 var async = require('async');
 var moment = require('moment');
+var jsdom = require('jsdom');
+$ = require('jquery')(new jsdom.JSDOM().window);
 
 var fecha = moment().format('DD MMMM YYYY, h:mm:ss a'); // May 1st 2019, 10:59:20 pm
 
@@ -184,44 +186,56 @@ socket.on('eliminar-archivos', function (datos, fn) {
  
   console.log("Evento 'eliminar-archivos' activado satisfactoriamente...");
 
-  var datos = {
-      rutas: datos.rutas
-  }
 
+  var rutas = datos.rutas;
   var eliminadosExito = [];
   var eliminadosError = [];
+  var eliminadosErrorAux = [];
 
+	for (var i=0; i<(rutas.length); i++){
 
-	for (var i=0; i<((datos.rutas).length); i++){
-
-	    var comando = 'del ' + datos.rutas[i];
-
+	   var comando = 'del ' + rutas[i];
 	   exec(comando, (error, stdout, stderr) => {
 	      if (error) {
 	        console.error(`exec error: ${error}`);
 	        return;
 	      }
-	      if (stdout == '') {
-	      	console.log('archivo eliminado');
-	      }
-	     console.log(`\nstdout: ${stdout}` + '\n');
-	     console.log(`\nstderr: ${stderr}` + '\n');
-	     eliminadosError.push([stdout, stderr]);
-
-	    fs.appendFileSync("c:\\cliente\\errorArchivos.txt", stdout, (err) => {
-	     	if (err) console.log(err);
-	     	console.log(stdout); 
-	     });
-
-      	
+	      if (stdout == '' & stderr == '') { // caso en que el archivo si se elimino
+	      	console.log(`\nstdout: ${stdout}` + '\n');
+	      	console.log(`\nstderr: ${stderr}` + '\n');
+	      } else { // caso en que el archivo no se elimino por algun motivo
+	      	console.log(`\nstdout: ${stdout}` + '\n');
+	      	console.log(`\nstderr: ${stderr}` + '\n');
+/*	      	if (stderr.includes('Could Not Find')){
+	      		console.log('incluye uno que no existe');
+	      		stdout = stderr.split('Could Not Find')
+	      	}*/
+	      	eliminadosError.push([stdout, stderr]);
+	      	eliminadosErrorAux.push(stdout);
+	      }	   
  		});
 	}
 
-	var arrayFinal = setTimeout(function() {
-		fn(eliminadosError);
-	    //console.log('arreglo final=' + eliminadosError);
-	  }, 5000);
-	
+	setTimeout(function() {
+
+		for (var i=0; i<rutas.length; i++){
+			//console.log('rutas[' + i + ']=' + rutas[i]);
+			rutas[i] = rutas[i].replace(/(\r\n|\n|\r)/gm,"");
+		}
+
+		for (var i=0; i<eliminadosErrorAux.length; i++){
+			//console.log('eliminadosErrorAux[' + i + ']=' + eliminadosErrorAux[i]);
+			eliminadosErrorAux[i] = eliminadosErrorAux[i].replace(/(\r\n|\n|\r)/gm,"");
+		}
+
+		var eliminadosExito = rutas.filter(x => !eliminadosErrorAux.includes(x));
+
+		console.log('Archivos eliminados con exito:\n' + eliminadosExito + '\n');
+		console.log('No se pudieron eliminar:\n' + eliminadosErrorAux + '\n');
+		fn({eliminadosExito, eliminadosError});
+
+	}, 1000);
+
 });
 
 });
