@@ -13,12 +13,9 @@ const Path = require('path');
 const Axios = require('axios');
 var async = require('async');
 var moment = require('moment');
-var jsdom = require('jsdom');
-$ = require('jquery')(new jsdom.JSDOM().window);
 
 var fecha = moment().format('DD MMMM YYYY, h:mm:ss a'); // May 1st 2019, 10:59:20 pm
 
-//console.log(fecha);
 
 const someDelay = 10;
 
@@ -57,15 +54,12 @@ socket.on('connect', function () {
     var alias = 0;
     ifaces[ifname].forEach(function (iface) {
     if ('IPv4' !== iface.family || iface.internal !== false) {
-      // skip over internal (i.e. 127.0.0.1) and non-ipv4 addresses
       return;
     }
     if (alias >= 1) {
-      // this single interface has multiple ipv4 addresses
       console.log(ifname + ':' + alias, iface.address);
     } else {
-      //this interface has only one ipv4 adress
-      //console.log(ifname, iface.address);
+
       console.log("Enviando IP=" + iface.address + " al servidor central...");
       console.log("Esperando instrucciones...\n");
     }
@@ -78,7 +72,7 @@ socket.on('connect', function () {
 
 /******************** Ejecutar regla ********************/
 
-socket.on('ejecutar-regla', function(datos){
+socket.on('ejecutar-regla', function(datos, fn){
   
   console.log("Evento 'ejecutar-regla' activado satisfactoriamente...");
   console.log("Ejecutando regla: " + datos.regla);
@@ -91,16 +85,19 @@ socket.on('ejecutar-regla', function(datos){
 
     obtenerRegla(datos.regla);
 
-    var child = spawn('cmd' , ['/c', 'c:\\cliente\\yara64.exe -r ' + 'c:\\cliente\\reglas\\' + datos.regla + ' ' + datos.ruta]);
-    //var child = spawn('yara64.exe' , ['-r ' + 'reglas\\' + datos.regla + ' ' + datos.ruta]);
+  var child = spawn('cmd' , ['/c', 'c:\\cliente\\yara64.exe -r ' + 'c:\\cliente\\reglas\\' + datos.regla + ' ' + datos.ruta]);
 
   child.stdout.on('data',
     function (data) {
         console.log('\nArchivos maliciosos:\n' + data);
-      fs.appendFileSync("c:\\cliente\\temp.txt", data, (err) => {
+      fs.writeFile("c:\\cliente\\temp.txt", data, (err) => {
      	 if (err) console.log(err);
      	 console.log("Información almacenada en temp.txt.");
       });
+/*      fs.appendFileSync("c:\\cliente\\temp.txt", data, (err) => {
+     	 if (err) console.log(err);
+     	 console.log("Información almacenada en temp.txt.");
+      });*/
   });
    
    child.stderr.on('data', function (data) {
@@ -114,38 +111,10 @@ socket.on('ejecutar-regla', function(datos){
 
     child.on('close', function (code) {
         console.log('Proceso terminado con código: ' + code);
+        fn(code);
     });
+    
 
-/*var allLines = fs.readFileSync('temp.txt').toString().split('\n');
-fs.writeFileSync('temp2.txt', '', function(){console.log('file is empty')})
-allLines.forEach(function (line) { 
-    var newLine = line + "candy";
-    console.log(newLine);
-    fs.appendFileSync("temp2.txt", newLine.toString() + "\n");
-});
-*/
-
-/**************** con Exec *******************/
-/*  var comando = 'c:\\cliente\\yara64.exe -r ' + 'c:\\cliente\\reglas\\' + datos.regla + ' ' + datos.ruta
-    exec(comando, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`exec error: ${error}`);
-        return;
-      }
-      console.log(`\nArchivos infectados:\n${stdout}` + '\n');
-      //fs.writeFile()...
-      fs.appendFileSync("c:\\cliente\\temp.txt", stdout, (err) => {
-     	 if (err) console.log(err);
-     	 console.log("Información almacenada en temp.txt.");
-      });
-      //console.log(`Error log:\n${stderr}`);
-	/*	 fs.writeFile("c:\\cliente\\errorlog.txt", stderr, (err) => {
-		     if (err) console.log(err);
-		     console.log("Información almacenada en errorlog.txt.");
-		  });
-		 console.log('Proceso terminado con código: 0');
-    });*/
-    //console.log('Proceso terminado con código: 0');
 });
 
 
@@ -179,6 +148,50 @@ socket.on('obtener-resultados', function (fn) {
 
 }); 
 
+correrCiclo = async(rutas) => {
+	for (var i=0; i<rutas.length; i++) {
+
+		console.log(rutas);
+
+		await new Promise (resolve => {
+			setTimeout(resolve, 1000)
+			borrarLineas(rutas[i])
+		});		
+	}
+}
+
+
+
+function borrarLineas(ruta) {
+
+		console.log('eliminando ruta ' + ruta + ' del archivo.');
+
+		fs.readFile('temp.txt', {encoding: 'utf-8'}, function(err, data) {
+    		if (err) throw error;
+
+		    let dataArray = data.split('\n'); // convert file data in an array
+		    const searchKeyword = ruta; // we are looking for a line, contains, key word 'user1' in the file
+		    let lastIndex = -1; // let say, we have not found the keyword
+
+		    for (let index=0; index<dataArray.length; index++) {
+		        if (dataArray[index].includes(searchKeyword)) { // check if a line contains the 'user1' keyword
+		            lastIndex = index; // found a line includes a 'user1' keyword
+		            break; 
+		        }
+		    }
+
+	    dataArray.splice(lastIndex, 1); // remove the keyword 'user1' from the data Array
+
+	    const updatedData = dataArray.join('\n');
+
+	    fs.writeFile('temp.txt', updatedData, (err) => {
+	        if (err) throw err;
+	        console.log ('Successfully updated the file data');
+	    	});
+		});
+}
+
+
 
 /******************** Eliminar archivos ********************/
 
@@ -187,14 +200,20 @@ socket.on('eliminar-archivos', function (datos, fn) {
   console.log("Evento 'eliminar-archivos' activado satisfactoriamente...");
 
 
-  var rutas = datos.rutas;
+  var rutas = datos;
+  console.log(rutas);
   var eliminadosExito = [];
   var eliminadosError = [];
   var eliminadosErrorAux = [];
 
+	for (var i=0; i<rutas.length; i++){
+		//console.log('rutas[' + i + ']=' + rutas[i]);
+		rutas[i] = rutas[i].replace(/(\r\n|\n|\r)/gm,"");
+	}
+
 	for (var i=0; i<(rutas.length); i++){
 
-	   var comando = 'del ' + rutas[i];
+	   var comando = 'del ' + '"' + rutas[i] + '"';
 	   exec(comando, (error, stdout, stderr) => {
 	      if (error) {
 	        console.error(`exec error: ${error}`);
@@ -230,10 +249,19 @@ socket.on('eliminar-archivos', function (datos, fn) {
 			eliminadosErrorAux[i] = eliminadosErrorAux[i].replace(/(\r\n|\n|\r)/gm,"");
 		}
 
+
 		var eliminadosExito = rutas.filter(x => !eliminadosErrorAux.includes(x));
+
+		for (var i=0; i<eliminadosExito.length; i++){
+			//console.log('eliminadosErrorAux[' + i + ']=' + eliminadosErrorAux[i]);
+			eliminadosExito[i] = eliminadosExito[i].replace(/(\r\n|\n|\r)/gm,"");
+		}
 
 		console.log('Archivos eliminados con exito:\n' + eliminadosExito + '\n');
 		console.log('No se pudieron eliminar:\n' + eliminadosErrorAux + '\n');
+
+		correrCiclo(eliminadosExito);
+
 		fn({eliminadosExito, eliminadosError});
 
 	}, 1000);
