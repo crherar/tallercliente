@@ -13,6 +13,8 @@ const Path = require('path');
 const Axios = require('axios');
 var async = require('async');
 var moment = require('moment');
+//var performance = require('performance-now');
+const { performance } = require('perf_hooks');
 
 var fecha = moment().format('DD MMMM YYYY, h:mm:ss a'); // May 1st 2019, 10:59:20 pm
 
@@ -73,7 +75,7 @@ socket.on('connect', function () {
 /******************** Ejecutar regla ********************/
 
 socket.on('ejecutar-regla', function(datos, fn){
-  
+
   console.log("Evento 'ejecutar-regla' activado satisfactoriamente...");
   console.log("Ejecutando regla: " + datos.regla);
   console.log("Escaneando en ruta: " + datos.ruta); 
@@ -85,21 +87,25 @@ socket.on('ejecutar-regla', function(datos, fn){
 
     obtenerRegla(datos.regla);
 
-  var child = spawn('cmd' , ['/c', 'c:\\cliente\\yara64.exe -r ' + 'c:\\cliente\\reglas\\' + datos.regla + ' ' + datos.ruta]);
+ 	var child = spawn('cmd' , ['/c', 'c:\\cliente\\yara64.exe -r ' + 'c:\\cliente\\reglas\\' + datos.regla + ' ' + datos.ruta]);
 
-  child.stdout.on('data',
-    function (data) {
-        console.log('\nArchivos maliciosos:\n' + data);
+	var t0 = performance.now();
+	child.stdout.on('data', function (data) {
+
+      console.log('\nArchivos maliciosos:\n' + data);
       fs.writeFile("c:\\cliente\\temp.txt", data, (err) => {
      	 if (err) console.log(err);
      	 console.log("Información almacenada en temp.txt.");
       });
-/*      fs.appendFileSync("c:\\cliente\\temp.txt", data, (err) => {
+
+	/*   fs.appendFileSync("c:\\cliente\\temp.txt", data, (err) => {
      	 if (err) console.log(err);
      	 console.log("Información almacenada en temp.txt.");
       });*/
+	  	var t1 = performance.now();
+		console.log("El proceso tomó " + (t1 - t0) + " milisegundos.")
   });
-   
+
    child.stderr.on('data', function (data) {
          fs.appendFileSync("c:\\cliente\\errorlog.txt", data, (err) => {
      	/* if (err) console.log(err);
@@ -113,8 +119,6 @@ socket.on('ejecutar-regla', function(datos, fn){
         console.log('Proceso terminado con código: ' + code);
         fn(code);
     });
-    
-
 });
 
 
@@ -151,7 +155,7 @@ socket.on('obtener-resultados', function (fn) {
 correrCiclo = async(rutas) => {
 	for (var i=0; i<rutas.length; i++) {
 
-		console.log(rutas);
+		//console.log(rutas);
 
 		await new Promise (resolve => {
 			setTimeout(resolve, 1000)
@@ -159,8 +163,6 @@ correrCiclo = async(rutas) => {
 		});		
 	}
 }
-
-
 
 function borrarLineas(ruta) {
 
@@ -186,7 +188,7 @@ function borrarLineas(ruta) {
 
 	    fs.writeFile('temp.txt', updatedData, (err) => {
 	        if (err) throw err;
-	        console.log ('Successfully updated the file data');
+	        console.log ('Archivo actualizado');
 	    	});
 		});
 }

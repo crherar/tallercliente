@@ -1,28 +1,10 @@
-Test C:\users\cris\AppData\Local\Microsoft\Windows\History\History.IE5\index.dat
-Test C:\users\cris\AppData\Local\Microsoft\Windows\History\History.IE5\MSHist012019050620190513\index.dat
-Test C:\users\cris\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations\959668a81d4f220e.automaticDestinations-ms
-Test C:\users\cris\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations\9b9cdc69c1c24e2b.automaticDestinations-ms
-Test C:\users\cris\AppData\Roaming\Microsoft\Windows\Recent\ransomware.lnk
-Test C:\users\cris\AppData\Roaming\Sublime Text 3\Local\Session.sublime_session
-Test C:\users\cris\Desktop\cliente\reglas\archivomalicioso.txt
-Test C:\users\cris\Desktop\cliente\reglas\test.yar
-Test C:\users\cris\Desktop\cliente\temp.txt
-Test C:\users\cris\Desktop\revisar\ransomware.txt
-Test C:\users\cris\Documents\pruebas\malicioso.exe
-Test C:\users\cris\Documents\ransomware.exe
-Test C:\users\cris\Documents\taller\archivomalicioso.exe
-Test C:\users\cris\ntuser.dat.LOG1
-Test C:\users\cris\NTUSER.DAT
-Test C:\users\cris.TALLER\AppData\Local\Google\Chrome\User Data\Default\Cache\data_1
-Test C:\users\cris.TALLER\AppData\Local\Google\Chrome\User Data\Default\DownloadMetadata
-Test C:\users\cris.TALLER\Desktop\nuevo temp 2.txt
-Test C:\users\cris.TALLER\Documents\archivos maliciosos\archivomalicioso.exe
-Test C:\users\cris.TALLER\Desktop\nuevo temp respaldo.txt
-Test C:\users\cris.TALLER\Documents\archivos maliciosos\malicioso.exe
-Test C:\users\cris.TALLER\Documents\archivos maliciosos\ransomware.exe
-Test C:\users\cris.TALLER\Documents\archivos maliciosos.rar
-Test C:\users\cris.TALLER\Documents\malicioso.exe
-Test C:\users\cris.TALLER\Downloads\archivos maliciosos\archivomalicioso.exe
-Test C:\users\cris.TALLER\Downloads\archivos maliciosos\malicioso.exe
-Test C:\users\cris.TALLER\Downloads\archivos maliciosos\ransomware.exe
-Test C:\users\cris.TALLER\Pictures\archivos.txt
+Test C:\users\cris.taller\AppData\Local\Google\Chrome\User Data\Default\Cache\data_1
+Test C:\users\cris.taller\AppData\Local\Google\Software Reporter Tool\software_reporter_tool.log
+Test C:\users\cris.taller\Desktop\ransomware.exe
+Test C:\users\cris.taller\Documents\archivos maliciosos\archivomalicioso.exe
+Test C:\users\cris.taller\Documents\archivos maliciosos\malicioso.exe
+Test C:\users\cris.taller\Documents\archivos maliciosos\ransomware.exe
+Test C:\users\cris.taller\Downloads\archivomalicioso.exe
+Test C:\users\cris.taller\Downloads\malicioso.exe
+Test C:\users\cris.taller\Downloads\ransomware.exe
+Test C:\users\cris.taller\Pictures\archivos.txt

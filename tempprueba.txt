@@ -15,13 +15,9 @@ Test C:\users\cris\ntuser.dat.LOG1
 Test C:\users\cris\NTUSER.DAT
 Test C:\users\cris.TALLER\AppData\Local\Google\Chrome\User Data\Default\Cache\data_1
 Test C:\users\cris.TALLER\AppData\Local\Google\Chrome\User Data\Default\DownloadMetadata
-Test C:\users\cris.TALLER\Desktop\nuevo temp 2.txt
-Test C:\users\cris.TALLER\Documents\archivos maliciosos\archivomalicioso.exe
-Test C:\users\cris.TALLER\Desktop\nuevo temp respaldo.txt
-Test C:\users\cris.TALLER\Documents\archivos maliciosos\malicioso.exe
-Test C:\users\cris.TALLER\Documents\archivos maliciosos\ransomware.exe
-Test C:\users\cris.TALLER\Documents\archivos maliciosos.rar
-Test C:\users\cris.TALLER\Documents\malicioso.exe
+Test C:\users\cris.TALLER\Desktop\ransomware.exe
+Test C:\users\cris.TALLER\Desktop\malicioso.exe
+Test C:\users\cris.TALLER\Desktop\archivomalicioso.exe
 Test C:\users\cris.TALLER\Downloads\archivos maliciosos\archivomalicioso.exe
 Test C:\users\cris.TALLER\Downloads\archivos maliciosos\malicioso.exe
 Test C:\users\cris.TALLER\Downloads\archivos maliciosos\ransomware.exe
