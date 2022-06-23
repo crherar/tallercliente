@@ -17,7 +17,7 @@
     "child-process": "^1.0.2",
     "child_process": "^1.0.2",
     "jquery": "^3.4.1",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "moment": "^2.24.0",
     "node-cmd": "^3.0.0",
     "performance-now": "^2.1.0",
